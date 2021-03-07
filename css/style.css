@@ -279,7 +279,7 @@ h2 {
 	transform: translateY(-50%) translateX(-50%);
 	align-items: center;
 	justify-content: center;
-	background: url("/img/iconPlay.svg") top no-repeat;
+	background: url("../img/iconPlay.svg") top no-repeat;
 	padding-top: 66px;
 	cursor: pointer;
 }
