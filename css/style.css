@@ -170,7 +170,7 @@ header-hero
 .social li:not(:last-child) {
 	margin: 0 0 16px 0;
 }
-.header-girl {
+.header__girl {
 	position: absolute;
 	right: 90px;
 	bottom: 0;
@@ -178,12 +178,12 @@ header-hero
 	width: 100%;
 	z-index: 0;
 }
-.header-girl img {
+.header__girl img {
 	display: block;
 	position: relative;
 	z-index: 1;
 }
-.header-girl:before {
+.header__girl:before {
 	display: block;
 	content: "";
 	width: 472px;
