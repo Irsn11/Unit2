@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
 	<div class="wrapper">
 		<header class="header">
 			<div class="container">
@@ -22,38 +21,40 @@
 					<img src="./img/girl.png" alt="">
 				</div>
 
-				<div class="header-top">
-					<div class="header-top_item">
-						<div class="header-textLogo">Мир красоты</div>
-						<nav class="header-nav">
-							<ul class="nav-list">
-								<li><a href="" class="nav-link">Услуги и цены</a></li>
-								<li><a href="" class="nav-link ">Мастера</a></li>
-								<li><a href="" class="nav-link">Наши работы</a></li>
-								<li><a href="" class="nav-link">О нас</a></li>
-								<li><a href="" class="nav-link">Контакты</a></li>
-							</ul>
-						</nav>
-						<div class="header-contact">
-							<div class="header-tel">8 (499) 686-17-62</div>
-						</div>
+				<div class="header__top">
+					<a href="/" class="logo header__logo">Мир красоты</a>
+					<nav id="nav" class="navigation header__nav">
+						<ul class="navigation__list">
+							<li><a href="#price" class="navigation__link">Услуги и цены</a></li>
+							<li><a href="#masters" class="navigation__link">Мастера</a></li>
+							<li><a href="#portfolio" class="navigation__link">Наши работы</a></li>
+							<li><a href="#about" class="navigation__link">О нас</a></li>
+							<li><a href="#contacts" class="navigation__link">Контакты</a></li>
+						</ul>
+					</nav>
+					<div class="header-phone header__phone">
+						<a href="tel:84996861762" class="header-phone__number">8 (499) 686-17-62</a>
+						<time class="header-phone__schedule">с 10.00 до 19.00 без выходных</time>
 					</div>
-					<div class="header-top_item end">с 10.00 до 19.00 без выходных</div>
+
+
 
 				</div>
-				<!--/header-top  -->
+				<!--/header__top  -->
+				<div class="header__content">
+					<div class="hero header__hero">
+						<h1 class="hero__tittle">Создай свой образ вместе с нами</h1>
+						<p class="hero__subtittle">Идеальный образ за 60 минут</p>
+						<button class="btn btn-large">Записаться онлайн</button>
+					</div>
 
-				<div class="hero">
-					<h1>Создай свой образ вместе с нами</h1>
-					<p>Идеальный образ за 60 мину</p>
-					<button class="btn btn-large">Записаться онлайн</button>
+					<ul class="social header__social">
+						<li><a href=""><img src="./img/social/vk.svg" alt=""></a></li>
+						<li><a href=""><img src="./img/social/insta.svg" alt=""></a></li>
+						<li><a href=""><img src="./img/social/yout.svg" alt=""></a></li>
+					</ul>
 				</div>
 
-				<ul class="social">
-					<li><a href=""><img src="./img/social/vk.svg" alt=""></a></li>
-					<li><a href=""><img src="./img/social/insta.svg" alt=""></a></li>
-					<li><a href=""><img src="./img/social/yout.svg" alt=""></a></li>
-				</ul>
 
 			</div>
 		</header>
@@ -64,7 +65,7 @@
 					<h2>О салоне</h2>
 					<div class="about">
 
-						<div class="about-descr">
+						<div class="about__descr">
 							<p>Мир красоты - это уютный салон в самом центре города. Здесь работают профессиональные визажисты,
 								стилисты и мастера татуажа
 							</p>
@@ -77,14 +78,9 @@
 							</p>
 							<button>Развернуть</button>
 						</div>
-						<div class="about-video">
-							<img src="./img/preview.jpg" alt="">
-							<div class="about-play play">
-								<div class="play-icon">
-									<img src="./img/iconPlay.svg" alt="">
-								</div>
-								<div class="play-text">Короткое видео о нас</div>
-							</div>
+						<div class="about__video">
+							<!-- <img src="./img/preview.jpg" alt=""> -->
+							<div class="about__play play">Короткое видео о нас</div>
 						</div>
 					</div>
 				</div>
@@ -92,25 +88,24 @@
 		</main>
 		<footer class="footer">
 			<div class="container">
-				<div class="footer-body">
-					<div class="footer-text">
-						<div class="footer-company">© 2020 «Море красоты»</div>
-						<a href="" class="footer-link">Политика конфиденциальности</a>
+				<div class="footer__body">
+					<div class="footer__text">
+						<div class="footer__company">© 2020 «Море красоты»</div>
+						<a href="" class="footer__link">Политика конфиденциальности</a>
 					</div>
-					<div class="footer-nav">
-						<ul class="nav-list">
-							<li><a href="" class="nav-link">Услуги и цены</a></li>
-							<li><a href="" class="nav-link">Мастера</a></li>
-							<li><a href="" class="nav-link">Наши работы</a></li>
-							<li><a href="" class="nav-link">О нас</a></li>
-							<li><a href="" class="nav-link">Контакты</a></li>
+					<div class="navigation footer-nav">
+						<ul class="navigation__list">
+							<li><a href="#price" class="navigation__link">Услуги и цены</a></li>
+							<li><a href="#masters" class="navigation__link">Мастера</a></li>
+							<li><a href="#portfolio" class="navigation__link">Наши работы</a></li>
+							<li><a href="#about" class="navigation__link">О нас</a></li>
+							<li><a href="#contacts" class="navigation__link">Контакты</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</footer>
 	</div>
-
 </body>
 
 </html>
