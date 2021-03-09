@@ -1,0 +1,26 @@
+.footer {
+	&__body {
+		padding: 20px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__text {
+		font-size: 12px;
+	}
+
+	&__company {
+		margin-bottom: 8px;
+	}
+	&__link {
+		text-decoration: underline;
+		color: #278aff;
+	}
+	&-nav {
+		font-size: 12px;
+	}
+
+	&-nav li:not(:last-child) {
+		margin-right: 18px;
+	}
+}
