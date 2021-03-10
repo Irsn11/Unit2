@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 node_modules
+=======
+/node_modules
+/dist
+/src/css
+>>>>>>> e1964351f8ce868a107b695a32bb45137f6ceff3

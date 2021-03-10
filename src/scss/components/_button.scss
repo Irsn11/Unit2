@@ -1,0 +1,13 @@
+.btn {
+	display: block;
+	background-color: #fb9475;
+	border-radius: 15%;
+	align-items: center;
+	border-radius: 24px;
+	color: #ffffff;
+	cursor: pointer;
+
+	&-large {
+		padding: 17px 30px;
+	}
+}
