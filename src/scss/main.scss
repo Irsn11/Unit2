@@ -1,0 +1,67 @@
+/*
+подключение файлов стилей блоков и элементов
+**********************************/
+@import "vars";
+@import "libs";
+@import "media";
+@import "components/index";
+@import "layout/index";
+
+/*
+глобальные стили
+**********************************/
+.wrapper,
+html,
+body {
+	height: 100%;
+	font-size: 16px;
+	color: #333333;
+}
+a {
+	color: inherit;
+}
+body {
+	line-height: 1;
+	font-family: "Montserrat", sans-serif;
+}
+h2,
+title {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 59px;
+	margin: 0 0 32px 0;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.header,
+.footer {
+	flex-shrink: 0;
+}
+
+.container {
+	max-width: 1140px;
+	width: 100%;
+}
+
+/*
+main
+**********************************/
+
+.main {
+	flex: 1;
+}
+.section {
+	padding: 50px 0px;
+
+	&__bottom {
+		padding-bottom: 2px; //итого 50px т.к. в этой секции элементы с mirgin:47px
+	}
+
+	&__gray {
+		background-color: #f8f6f7;
+	}
+}
