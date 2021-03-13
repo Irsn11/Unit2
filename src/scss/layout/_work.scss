@@ -1,0 +1,73 @@
+.work {
+	&__arrow {
+		position: absolute;
+		right: 0;
+		top: 30px;
+	}
+
+	&__row {
+		max-width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 0px -15px;
+	}
+
+	&__column {
+		flex: 0 1 25%;
+		padding: 0px 15px;
+	}
+	&__image {
+		height: 338px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		border-radius: 8px;
+		margin-bottom: 20px;
+		position: relative;
+		overflow: hidden;
+		transition: transform 0.25s;
+
+		&:before {
+			content: "";
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			position: absolute;
+			background-color: #000;
+			opacity: 0;
+			transition: 0.25s opacity;
+		}
+		&:hover:before {
+			opacity: 0.5;
+		}
+		&:after {
+			content: "Увеличить";
+			color: #fff;
+			font-weight: 500;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%) translateX(-50%);
+			max-width: 120px;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			opacity: 0;
+			transition: opacity 0.25s;
+			background: url("../img/scale.svg") top no-repeat;
+			padding-top: 56px;
+			cursor: pointer;
+		}
+
+		&:hover:after {
+			opacity: 1;
+			//transform: scale(1.1);
+		}
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}

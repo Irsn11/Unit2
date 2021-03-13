@@ -1,0 +1,16 @@
+.arrow {
+	button {
+		height: 40px;
+		width: 40px;
+		border-radius: 50%;
+		background-color: #ffffff;
+		cursor: pointer;
+		transition: background-color 0.25s;
+		&:hover {
+			background-color: #f8f6f7;
+		}
+	}
+	&__prev {
+		margin-right: 16px;
+	}
+}
