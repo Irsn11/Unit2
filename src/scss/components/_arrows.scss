@@ -1,9 +1,15 @@
 .arrow {
+	position: absolute;
+	right: 0;
+	top: 30px;
+	height: 40px;
 	button {
 		height: 40px;
 		width: 40px;
 		border-radius: 50%;
 		background-color: #ffffff;
+		background-position: 50%;
+		background-repeat: no-repeat;
 		cursor: pointer;
 		transition: background-color 0.25s;
 		&:hover {
@@ -11,6 +17,10 @@
 		}
 	}
 	&__prev {
+		background-image: url("/img/arrow/prev.png");
 		margin-right: 16px;
+	}
+	&__next {
+		background-image: url("/img/arrow/next.png");
 	}
 }

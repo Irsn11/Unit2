@@ -1,10 +1,4 @@
 .work {
-	&__arrow {
-		position: absolute;
-		right: 0;
-		top: 30px;
-	}
-
 	&__row {
 		max-width: 100%;
 		display: flex;
@@ -64,7 +58,6 @@
 
 		&:hover:after {
 			opacity: 1;
-			//transform: scale(1.1);
 		}
 		&:hover {
 			transform: scale(1.1);

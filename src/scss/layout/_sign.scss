@@ -17,23 +17,13 @@
 		line-height: 20px;
 		margin-bottom: 34px;
 	}
-
-	&__form {
-		input {
-			display: block;
-			border: 1px solid gray;
-			height: 44px;
-			width: 375px;
-			padding: 0 16px;
-			margin-bottom: 20px;
-		}
-		p {
-			font-weight: 300;
-			font-size: 12px;
-			line-height: 15px;
-		}
+}
+.form {
+	p {
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 15px;
 	}
-
 	&__link {
 		text-decoration: underline;
 		color: #278aff;
