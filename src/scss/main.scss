@@ -3,7 +3,6 @@
 **********************************/
 @import "vars";
 @import "libs";
-@import "media";
 @import "components/index";
 @import "layout/index";
 
@@ -16,6 +15,7 @@ body {
 	height: 100%;
 	font-size: 16px;
 	color: #333333;
+	min-width: 320px;
 }
 a {
 	color: inherit;
@@ -68,3 +68,4 @@ main
 		margin: 0 0 32px 0;
 	}
 }
+@import "media";
