@@ -1,0 +1,33 @@
+.features {
+	&__list {
+		display: flex;
+		justify-content: center;
+		margin: 0px -15px;
+	}
+	&__title {
+		margin-bottom: 12px;
+	}
+	&__text {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	&__item {
+		max-width: 326px;
+		text-align: center;
+		padding: 76px 15px 0px;
+		position: relative;
+		background-repeat: no-repeat;
+		background-position-x: center;
+	}
+	&_first {
+		background-image: url("../img/features/first.png");
+	}
+
+	&_second {
+		background-image: url("../img/features/second.png");
+	}
+
+	&_third {
+		background-image: url("../img/features/third.png");
+	}
+}

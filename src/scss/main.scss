@@ -24,12 +24,15 @@ body {
 	line-height: 1;
 	font-family: "Montserrat", sans-serif;
 }
-h2,
-title {
+h2 {
 	font-weight: 700;
 	font-size: 48px;
 	line-height: 59px;
-	margin: 0 0 32px 0;
+}
+h3 {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
 }
 
 .wrapper {
@@ -45,6 +48,7 @@ title {
 .container {
 	max-width: 1140px;
 	width: 100%;
+	position: relative;
 }
 
 /*
@@ -57,11 +61,10 @@ main
 .section {
 	padding: 50px 0px;
 
-	&__bottom {
-		padding-bottom: 2px; //итого 50px т.к. в этой секции элементы с mirgin:47px
-	}
-
-	&__gray {
+	&_gray {
 		background-color: #f8f6f7;
+	}
+	&__title {
+		margin: 0 0 32px 0;
 	}
 }
