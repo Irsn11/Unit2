@@ -1,0 +1,37 @@
+.sign {
+	border-radius: 8px;
+	background-color: #ffffff;
+	padding: 40px;
+	height: 400px;
+	width: 455px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+
+	&__title {
+		font-weight: 600;
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 20px;
+		margin-bottom: 34px;
+	}
+}
+.form {
+	p {
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 15px;
+	}
+	&__link {
+		text-decoration: underline;
+		color: #278aff;
+	}
+
+	&__btn {
+		padding: 17px 145.5px;
+		text-align: center;
+		margin-bottom: 13px;
+	}
+}
