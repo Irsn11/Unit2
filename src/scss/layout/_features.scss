@@ -2,6 +2,7 @@
 	&__list {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		margin: 0px -15px;
 	}
 	&__title {
@@ -18,6 +19,10 @@
 		position: relative;
 		background-repeat: no-repeat;
 		background-position-x: center;
+		margin-bottom: 40px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 	}
 	&_first {
 		background-image: url("../img/features/first.png");

@@ -1,12 +1,14 @@
 .footer {
 	&__body {
-		padding: 20px 0;
+		padding: 20px 0 0px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-wrap: wrap;
 	}
 	&__text {
 		font-size: 12px;
+		margin-bottom: 20px;
 	}
 
 	&__company {
@@ -18,9 +20,13 @@
 	}
 	&-nav {
 		font-size: 12px;
-	}
-
-	&-nav li:not(:last-child) {
-		margin-right: 18px;
+		li {
+			margin-bottom: 10px;
+			& {
+				:not(:last-child) {
+					margin-right: 18px;
+				}
+			}
+		}
 	}
 }

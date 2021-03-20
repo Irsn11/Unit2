@@ -7,21 +7,30 @@
 		&__descr {
 			margin-bottom: 62px;
 			max-width: 100%;
+			& p {
+				margin-bottom: 26px;
+			}
 		}
-		&__descr p {
-			font-size: 30px;
-			line-height: 42px;
-			margin-bottom: 26px;
-		}
-		&__descr p:last-of-type {
-			font-size: 26px;
-			line-height: 36px;
+	}
+	.preview {
+		&__photo {
+			height: 423px;
+			min-width: 642px;
 		}
 	}
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+	.section {
+		&__title {
+			text-align: center;
+		}
+		.masters__subtitle {
+			text-align: center;
+		}
+	}
+
 	.header {
 		&__girl {
 			opacity: 0.2;
@@ -97,48 +106,20 @@
 	.price {
 		&__nav {
 			ul {
-				display: flex;
-				flex-wrap: wrap;
-				margin-bottom: 57px;
+				//margin-bottom: 57px;
 				li {
-					flex: 0 1 25%;
 					margin-bottom: 30px;
 				}
 			}
 		}
-	}
-}
-/* Small Devices, Tablets */
-@media screen and (max-width: 767px) {
-	h3 {
-		font-size: 24px;
-		line-height: 34px;
-	}
-
-	.section {
-		text-align: center;
+		&__colum {
+			flex: 0 1 100%;
+		}
 	}
 
 	.features {
-		&__text {
-			font-size: 22px;
-			line-height: 23px;
-		}
-	}
-	.item__body {
-		.item__text {
-			font-size: 20px;
-			line-height: 23px;
-		}
-		.item__btn {
-			width: 100%;
-			padding: 20px 0;
-		}
-	}
-	.brends {
-		&__title {
-			font-size: 26px;
-			line-height: 36px;
+		&__item {
+			max-width: 472px;
 		}
 	}
 	.connection {
@@ -149,22 +130,153 @@
 			flex-direction: column;
 			align-items: center;
 			margin-bottom: 42px;
-		}
-	}
-	.price {
-		&__nav {
-			ul {
-				text-align: left;
-				li {
-					flex: 0 1 50%;
-				}
+			.title {
+				margin-bottom: 20px;
+			}
+			&__address {
+				margin-bottom: 20px;
+			}
+
+			&__link {
+				margin-bottom: 20px;
 			}
 		}
 	}
 }
 
+/* Small Devices, Tablets */
+@media screen and (max-width: 767px) {
+	.features {
+		&__item {
+			max-width: 472px;
+		}
+	}
+	.item__body {
+		&__btn {
+			width: 100%;
+			padding: 20px 0;
+		}
+	}
+
+	.preview {
+		&__photo {
+			height: 310px;
+			min-width: 470px;
+		}
+	}
+	.popular {
+		&__row {
+			justify-content: center;
+		}
+		&__colum {
+			flex: 0 1 50%;
+		}
+	}
+	.masters {
+		&__column {
+			flex: 0 1 50%;
+			margin-bottom: 40px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.arrow {
+		left: 42%;
+		top: 55px;
+	}
+	.work {
+		margin-top: 40px;
+		&__row {
+			margin: 0px;
+		}
+		&__column {
+			flex: 0 1 50%;
+		}
+	}
+}
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+	h2 {
+		font-size: 30px;
+		line-height: 38px;
+	}
+
+	.header {
+		&-phone__number {
+			font-size: 14px;
+		}
+		&-phone__schedule {
+			font-size: 8px;
+		}
+		.hero {
+			&__tittle {
+				font-size: 36px;
+			}
+		}
+		.logo {
+			font-size: 18px;
+		}
+		&__burger {
+			width: 28px;
+			height: 20px;
+		}
+	}
+	.arrow {
+		top: 38px;
+	}
+	.preview {
+		&__photo {
+			height: 204px;
+			min-width: 310px;
+		}
+		&__photo {
+			&:after {
+				font-size: 12px;
+			}
+		}
+	}
+	.popular {
+		&__row {
+			justify-content: center;
+		}
+		&__colum {
+			flex: 0 1 90%;
+		}
+	}
+	.price {
+		.item {
+			&__title {
+				font-size: 16px;
+			}
+			&__text {
+				font-size: 12px;
+			}
+			&__price {
+				font-size: 18px;
+			}
+		}
+	}
+	.masters {
+		&__column {
+			flex: 0 1 100%;
+		}
+	}
+
+	.work {
+		&__column {
+			flex: 0 1 100%;
+		}
+	}
+
+	.sign {
+		padding: 20px;
+	}
+	.footer {
+		&__text {
+			margin-bottom: 30px;
+		}
+	}
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
