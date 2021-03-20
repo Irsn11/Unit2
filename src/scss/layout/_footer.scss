@@ -22,10 +22,8 @@
 		font-size: 12px;
 		li {
 			margin-bottom: 10px;
-			& {
-				:not(:last-child) {
-					margin-right: 18px;
-				}
+			&:not(:last-child) {
+				margin-right: 18px;
 			}
 		}
 	}
