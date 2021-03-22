@@ -1,5 +1,282 @@
-@media screen and (max-width: 768px) {
-	.header__girl {
-		opacity: 0.6;
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1280px) {
+	.about {
+		flex-direction: column;
+		align-items: center;
+		text-align: left;
+		&__descr {
+			margin-bottom: 62px;
+			max-width: 100%;
+			& p {
+				margin-bottom: 26px;
+			}
+		}
 	}
+	.preview {
+		&__photo {
+			height: 423px;
+			min-width: 642px;
+		}
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+	.section {
+		&__title {
+			text-align: center;
+		}
+		.masters__subtitle {
+			text-align: center;
+		}
+	}
+
+	.header {
+		&__girl {
+			opacity: 0.2;
+		}
+		&__content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
+			button {
+				margin: 0 auto;
+			}
+		}
+		&__hero {
+			margin-bottom: 60px;
+		}
+		&__social {
+			position: relative;
+			flex-direction: row;
+			z-index: 2;
+			li img {
+				padding: 10px;
+			}
+		}
+
+		&__burger {
+			display: block;
+			position: relative;
+			width: 38px;
+			height: 20px;
+			span {
+				background-color: #000000;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				left: 0;
+				top: 9px;
+			}
+		}
+		&__burger:before,
+		&__burger:after {
+			content: "";
+			background-color: #000000;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+		}
+		&__burger:before {
+			top: 0;
+		}
+		&__burger:after {
+			bottom: 0;
+		}
+		&__nav {
+			position: fixed;
+			top: -100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgb(250, 183, 216);
+			padding: 70px 10px 20px 10px;
+			ul {
+				display: block;
+				li {
+					margin: 0 0 20px 0;
+				}
+			}
+		}
+	}
+
+	.price {
+		&__nav {
+			ul {
+				li {
+					margin-bottom: 30px;
+				}
+			}
+		}
+		&__colum {
+			flex: 0 1 100%;
+		}
+	}
+
+	.features {
+		&__item {
+			max-width: 472px;
+		}
+	}
+	.connection {
+		flex-direction: column;
+		text-align: center;
+		.contacts {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 42px;
+			.title {
+				margin-bottom: 20px;
+			}
+			&__address {
+				margin-bottom: 20px;
+			}
+
+			&__link {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+/* Small Devices, Tablets */
+@media screen and (max-width: 767px) {
+	.features {
+		&__item {
+			max-width: 472px;
+		}
+	}
+	.item__body {
+		&__btn {
+			width: 100%;
+			padding: 20px 0;
+		}
+	}
+
+	.preview {
+		&__photo {
+			height: 310px;
+			min-width: 470px;
+		}
+	}
+	.popular {
+		&__row {
+			justify-content: center;
+		}
+		&__colum {
+			flex: 0 1 50%;
+		}
+	}
+	.masters {
+		&__column {
+			flex: 0 1 50%;
+			margin-bottom: 40px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.arrow {
+		left: 42%;
+		top: 55px;
+	}
+	.work {
+		margin-top: 40px;
+		&__row {
+			margin: 0px;
+		}
+		&__column {
+			flex: 0 1 50%;
+		}
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+	h2 {
+		font-size: 30px;
+		line-height: 38px;
+	}
+
+	.header {
+		&-phone__number {
+			font-size: 14px;
+		}
+		&-phone__schedule {
+			font-size: 8px;
+		}
+		.hero {
+			&__tittle {
+				font-size: 36px;
+			}
+		}
+		.logo {
+			font-size: 18px;
+		}
+		&__burger {
+			width: 28px;
+			height: 20px;
+		}
+	}
+	.arrow {
+		top: 38px;
+	}
+	.preview {
+		&__photo {
+			height: 204px;
+			min-width: 310px;
+		}
+		&__photo {
+			&:after {
+				font-size: 12px;
+			}
+		}
+	}
+	.popular {
+		&__row {
+			justify-content: center;
+		}
+		&__colum {
+			flex: 0 1 90%;
+		}
+	}
+	.price {
+		.item {
+			&__title {
+				font-size: 16px;
+			}
+			&__text {
+				font-size: 12px;
+			}
+			&__price {
+				font-size: 18px;
+			}
+		}
+	}
+	.masters {
+		&__column {
+			flex: 0 1 100%;
+		}
+	}
+
+	.work {
+		&__column {
+			flex: 0 1 100%;
+		}
+	}
+
+	.sign {
+		padding: 20px;
+	}
+	.footer {
+		&__text {
+			margin-bottom: 30px;
+		}
+	}
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
 }

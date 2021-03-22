@@ -1,9 +1,13 @@
 .price {
 	&__nav {
 		margin-bottom: 47px;
+		& li {
+			margin-bottom: 30px;
 
-		& li:not(:last-child) {
-			margin-right: 28px;
+			&:not(:last-child) {
+				margin-bottom: 30px;
+				margin-right: 28px;
+			}
 		}
 		& a {
 			padding-bottom: 6px;
@@ -44,6 +48,7 @@
 			font-size: 20px;
 			line-height: 24px;
 			color: #00bf78;
+			white-space: nowrap;
 		}
 	}
 }
