@@ -10,18 +10,20 @@ $(function () {
 		nextArrow: $('.arrow-next'),
 	});
 });
-new TabsManager(document.querySelector('._tabs'));
 
-const form = document.querySelector('.form');
-form.addEventListener('submit', function (event) {
-	event.preventDefault();
-	const { name, phone } = form.elements;
-	const formData = {
-		name: name.value,
-		phone: phone.value
-	}
+$(function () {
+	new TabsManager(document.querySelector('._tabs'));
+	const form = document.querySelector('.form');
+	form.addEventListener('submit', function (event) {
+		event.preventDefault();
+		const { name, phone } = form.elements;
+		const formData = {
+			name: name.value,
+			phone: phone.value
+		}
 
-	form.reset();
+		form.reset();
 
-	console.log(formData);
+		console.log(formData);
+	});
 });
