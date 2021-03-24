@@ -51,4 +51,8 @@
 			white-space: nowrap;
 		}
 	}
+	.navigation__link._active {
+		color: #00bf78;
+		border-bottom: 2px solid #00bf78;
+	}
 }

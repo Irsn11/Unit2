@@ -1,0 +1,7 @@
+._tabs-block {
+	display: none;
+
+	&._active {
+		display: flex;
+	}
+}

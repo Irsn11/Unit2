@@ -16,11 +16,11 @@
 			background-color: #f8f6f7;
 		}
 	}
-	&__prev {
-		background-image: url("/img/arrow/prev.png");
+	&-prev {
+		background-image: url("../img/arrow/prev.png");
 		margin-right: 16px;
 	}
-	&__next {
-		background-image: url("/img/arrow/next.png");
+	&-next {
+		background-image: url("../img/arrow/next.png");
 	}
 }
