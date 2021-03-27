@@ -1,11 +1,48 @@
-const { src, dest, task, watch, series, parallel } = require('gulp');
+const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
+const browserSync = require('browser-sync').create();
 const del = require('del');
+const webpackStream = require('webpack-stream');
+const rename = require('gulp-rename');
+
+// Таск компиляции SASS в CSS
+function buildSass() {
+	return src('src/scss/**/*.scss')
+		.pipe(sourcemaps.init())
+		.pipe(sass())
+		.on('error', sass.logError)
+		.pipe(
+			postcss([
+				autoprefixer({
+					grid: true,
+					overrideBrowserslist: ['last 2 versions'],
+				}),
+				cssnano(),
+			])
+		)
+		.pipe(sourcemaps.write('.'))
+		.pipe(dest('src/css'))
+		.pipe(dest('dist/css'))
+		.pipe(browserSync.stream());
+}
+
+function buildJs() {
+	return src('src/js/index.js')
+		.pipe(webpackStream(require('./webpack.config')))
+		.pipe(rename('main.min.js'))
+		.pipe(dest('src/js'))
+		.pipe(dest('dist/js'))
+		.pipe(browserSync.stream());
+}
+
+// Таск работы с html файлами
+function html() {
+	return src('src/**/*.html').pipe(dest('dist/')).pipe(browserSync.stream())
+}
 
 function browsersync() {
 	browserSync.init({
@@ -13,27 +50,10 @@ function browsersync() {
 		notify: false,
 	});
 }
-// Таск компиляции SASS в CSS
-function buildSass() {
-	return src('src/scss/**/*.scss')
-		.pipe(sourcemaps.init())
-		.pipe(sass())
-		.on('error', sass.logError)
-		.pipe(postcss([autoprefixer({ grid: true, overrideBrowserslist: ['last 2 versions'], }), cssnano(),]))
-		.pipe(sourcemaps.write('.'))
-		.pipe(dest('dist/css'))
-		.pipe(dest('src/css'))
-		.pipe(browserSync.stream());
 
-}
-// Таск работы с html файлами
-function html() {
-	return src('src/**/*.html')
-		.pipe(dest('dist/'))
-		.pipe(browserSync.stream())
-}
 // Таск отслеживания изменения файлов и запуск сервера
 function serve() {
+	watch(['src/js/**/*.js', '!src/js/**/*.min.js'], buildJs);
 	watch('src/scss/**/*.scss', buildSass);
 	watch('src/**/*.html', html);
 }
@@ -47,8 +67,6 @@ function copy() {
 function cleanDist() {
 	return del('dist/**/*', { force: true });
 }
-//exports.serve = serve;
-//exports.buildSass = buildSass;
-//exports.default = parallel(browsersync, serve);
-exports.build = series(cleanDist, buildSass, html, copy);
-exports.default = series(buildSass, parallel(browsersync, serve));
+
+exports.build = series(cleanDist, buildSass, buildJs, html, copy);
+exports.default = series([buildSass, buildJs], parallel(browsersync, serve));

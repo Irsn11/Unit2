@@ -1,6 +1,8 @@
 
 import TabsManager from './files/tabs.js';
 
+
+
 $(function () {
 	$('#carousel').slick({
 		infinite: true,
