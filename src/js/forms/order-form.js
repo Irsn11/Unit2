@@ -75,9 +75,9 @@ class OrderForm {
 
 				setTimeout(() => {
 					$.fancybox.close(); // закрыть модалку
-				}, 1000);
+				}, 3000);
 
-			}, 2000);
+			}, 1000);
 
 
 
