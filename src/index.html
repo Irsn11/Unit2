@@ -50,7 +50,7 @@
 					<div class="hero header__hero">
 						<h1 class="hero__tittle">Создай свой образ вместе с нами</h1>
 						<p class="hero__subtittle">Идеальный образ за 60 минут</p>
-						<button class="btn btn-large">Записаться онлайн</button>
+						<button data-fancybox data-src="#request" class="btn btn-large">Записаться онлайн</button>
 					</div>
 					<ul class="social header__social">
 						<li><a href=""><img src="./img/social/vk.svg" alt=""></a></li>
@@ -120,7 +120,7 @@
 										<div class="item__body">
 											<h3 class="item__title">Маникюр</h3>
 											<p class="item__text">Аппаратный, комбинированный или классический.</p>
-											<a class="item__btn btn" href="#">Записаться</a>
+											<a data-fancybox data-src="#request" class="item__btn btn" href="#">Записаться</a>
 										</div>
 									</div>
 								</div>
@@ -134,7 +134,7 @@
 											<h3 class="item__title">Покрытие гель-лак</h3>
 											<p class="item__text">Гель-лак наносится в несколько слоев с использование базы и топа.
 												Каждый слой полимеризуется в LED-лампе.</p>
-											<a class="item__btn btn" href="#">Записаться</a>
+											<a data-fancybox data-src="#request" class="item__btn btn" href="#">Записаться</a>
 										</div>
 									</div>
 								</div>
@@ -148,7 +148,7 @@
 											<h3 class="item__title">Бразильский маникюр</h3>
 											<p class="item__text">Выполняется в одноразовых перчатках наполненных увлажняющим
 												лосьоном.</p>
-											<a class="item__btn btn" href="#">Записаться</a>
+											<a data-fancybox data-src="#request" class="item__btn btn" href="#">Записаться</a>
 										</div>
 									</div>
 								</div>
@@ -161,7 +161,7 @@
 										<div class="item__body">
 											<h3 class="item__title">Педикюр</h3>
 											<p class="item__text">Аппаратный, комбинированный или классический.</p>
-											<a class="item__btn btn" href="#">Записаться</a>
+											<a data-fancybox data-src="#request" class="item__btn btn" href="#">Записаться</a>
 										</div>
 									</div>
 								</div>
@@ -176,7 +176,7 @@
 											<p class="item__text">Благодаря этой процедуре увлажнение кожи увеличивается на 80%,
 												также выводит токсины и укрепляет суставы.
 											</p>
-											<a class="item__btn btn" href="#">Записаться</a>
+											<a data-fancybox data-src="#request" class="item__btn btn" href="#">Записаться</a>
 										</div>
 									</div>
 								</div>
@@ -478,7 +478,7 @@
 						<p class="masters__subtitle">Дружная команда настоящих профессионалов</p>
 						<div class="masters__row">
 							<div class="masters__column">
-								<div class="masters__item item">
+								<div data-fancybox data-src="#request" class="masters__item item">
 									<div class="item__row">
 										<div class="item__image" style="background-image: url(./img/masters/KrasnovaIrina.png)">
 										</div>
@@ -644,15 +644,71 @@
 				</div>
 			</div>
 		</footer>
+		<div class="order hidden" id="request">
+			<h2>Онлайн запись</h2>
+			<form action="" id="order-form" class="order-form">
+				<div class="order-form__inner">
+					<div class="form-control">
+						<label>Ваше имя</label>
+						<input type="text" name="name" id="name" required>
+					</div>
+					<div class="form-control">
+						<label>Номер телефона</label>
+						<input type="text" name="phone" placeholder="+7 (___) ___-__-__" required>
+					</div>
+					<div class="form-control">
+						<label>Выберете мастера</label>
+						<select name="masterId">
+							<option value="">Не выбран</option>
+						</select>
+					</div>
+					<div class="form-control">
+						<label>Выберете услугу</label>
+						<select name="serviceId">
+							<option value="">Не выбран</option>
+						</select>
+					</div>
+					<div class="form-control">
+						<label>Дата визита</label>
+						<input type="date" name="visitDate">
+					</div>
+					<button class="btn btn-large" type="submit">Отправить</button>
+				</div>
+
+				<div class="loader order-form__loader" title="6">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px"
+						viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+						<rect x="0" y="0" width="4" height="20" fill="#333">
+							<animate attributeName="opacity" attributeType="XML" values="1; .2; 1" begin="0s" dur="0.6s"
+								repeatCount="indefinite" />
+						</rect>
+						<rect x="7" y="0" width="4" height="20" fill="#333">
+							<animate attributeName="opacity" attributeType="XML" values="1; .2; 1" begin="0.2s" dur="0.6s"
+								repeatCount="indefinite" />
+						</rect>
+						<rect x="14" y="0" width="4" height="20" fill="#333">
+							<animate attributeName="opacity" attributeType="XML" values="1; .2; 1" begin="0.4s" dur="0.6s"
+								repeatCount="indefinite" />
+						</rect>
+					</svg>
+				</div>
+			</form>
+			<div class="success order-form__success">Ваша заявка отправлена! В ближайшее время с вами свяжется менеджер.
+			</div>
+		</div>
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js">
 		</script>
 		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
 			integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
 			crossorigin="anonymous"></script>
-
-		<script src="./js/files/mobileMenu.js"></script>
-		<script src="./js/main.js" type="module"></script>
+		<script src="./js/jquery.validate.js">
+			$(function () {
+				$('#form').validate();
+			});
+		</script>
+		<script src="./js/main.min.js"></script>
 
 </body>
 

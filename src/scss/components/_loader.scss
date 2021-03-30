@@ -1,0 +1,17 @@
+.loader {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 50%;
+	transform: translateX(-50%);
+	//display: inline-block;
+	display: none;
+}
+
+/*
+  Set the color of the icon
+*/
+svg path,
+svg rect {
+	fill: #fb9475;
+}

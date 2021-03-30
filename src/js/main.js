@@ -1,5 +1,7 @@
 
 import TabsManager from './files/tabs.js';
+import OrderForm from './forms/order-form.js';
+
 
 $(function () {
 	$('#carousel').slick({
@@ -13,6 +15,13 @@ $(function () {
 
 $(function () {
 	new TabsManager(document.querySelector('._tabs'));
+});
+$(function () {
+	new OrderForm();
+});
+
+$(function () {
+
 	const form = document.querySelector('.form');
 	form.addEventListener('submit', function (event) {
 		event.preventDefault();

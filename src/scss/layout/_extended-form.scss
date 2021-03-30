@@ -1,0 +1,39 @@
+.order {
+	position: relative;
+
+	&-form {
+		margin-top: 20px;
+
+		&__inner {
+		}
+
+		&__loader.active {
+			display: inline-block;
+		}
+	}
+	.form-control {
+		margin-bottom: 20px;
+		select {
+			border: 1px solid #808080;
+			width: 100%;
+			height: 44px;
+		}
+	}
+	.success {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		line-height: 30px;
+		display: none;
+		background-color: rgba($color: #fb9475, $alpha: 0.8);
+		color: #333333;
+		padding: 50px 0;
+		font-size: 20px;
+
+		&.active {
+			display: inline-block;
+		}
+	}
+}
