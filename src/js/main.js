@@ -1,6 +1,6 @@
 
 import TabsManager from './files/tabs.js';
-
+import OrderForm from './forms/order-form.js';
 
 
 $(function () {
@@ -15,9 +15,10 @@ $(function () {
 
 $(function () {
 	new TabsManager(document.querySelector('._tabs'));
-
 });
-
+$(function () {
+	new OrderForm();
+});
 
 $(function () {
 

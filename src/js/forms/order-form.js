@@ -1,19 +1,20 @@
-import ApiService from '/services/api-service';
+import ApiService from '../servises/api-service';
 class OrderForm {
 	constructor() {
 		this.pending = false;
 		this.formEl = document.getElementById('order-form');
 		this.mastersSelect = this.formEl.elements.masterId;
 		this.serviceSelect = this.formEl.elements.serviceId;
-
 		this._init();
 		this._bindEvents();
 	}
+
 	_init() {
 		this._buildMastersSelect();
 		this._buildServicesSelect();
 	}
-	async __buildMastersSelect() {
+
+	async _buildMastersSelect() {
 		try {
 			const masters = await ApiService.getMasters();
 			masters.forEach(master => {
@@ -26,7 +27,7 @@ class OrderForm {
 			console.error(error);
 		}
 	}
-	async __buildServicesSelect() {
+	async _buildServicesSelect() {
 		try {
 			const services = await ApiService.getSaloonServices();
 			services.forEach(service => {
@@ -40,10 +41,12 @@ class OrderForm {
 		}
 
 	}
-	_bindEvebnts() {
+	_bindEvents() {
 		this.formEl.addEventListener('submit', (event) => {
 			event.preventDefault();
 			this._handleForm();
+
+
 		});
 	}
 	async _handleForm() {
@@ -57,11 +60,27 @@ class OrderForm {
 		};
 		this._togglePendingState();
 
+
 		try {
-			await ApiService.createOder(orderData);
-			this.formEl.reset();
-			//показать сообщение об успехе
-			//закрыть модалку
+			await ApiService.createOrder(orderData);
+			const loader = document.querySelector('.order-form__loader');
+			const message = document.querySelector('.success');
+
+			loader.classList.add('active');
+
+			setTimeout(() => {
+				this.formEl.reset();
+				loader.classList.remove('active');//показать loader
+				message.classList.add('active'); //показать сообщение об успехе
+
+				setTimeout(() => {
+					$.fancybox.close(); // закрыть модалку
+				}, 1000);
+
+			}, 2000);
+
+
+
 
 		} catch (error) {
 			console.error(error);
@@ -69,6 +88,8 @@ class OrderForm {
 		} finally {
 			this._togglePendingState();
 		}
+
+
 	}
 	_togglePendingState() {
 		this.pending = !this.pending;
